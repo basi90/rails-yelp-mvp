@@ -6,10 +6,11 @@
   <ul>
     <% @restaurants.each do |restaurant| %>
       <li>
-        <h2><%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
+        <h2><%= restaurant.name %></h2>
         <p>Address: <%= restaurant.address %></p>
         <p>Phone number: <%= restaurant.phone_number %></p>
         <p>Category: <%= restaurant.category %></p>
+        <%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
       </li>
     <% end %>
   </ul>
