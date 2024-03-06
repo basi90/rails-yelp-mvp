@@ -5,5 +5,7 @@
   <p>Phone number: <%= @restaurant.phone_number %></p>
   <p>Category: <%= @restaurant.category %></p>
 
+
+  <%= link_to "Write a Review", new_restaurant_review_path(@restaurant), class: "btn btn-secondary" %>
   <%= link_to "Back to Restaurants", restaurants_path, class: "btn btn-secondary" %>
 </div>
